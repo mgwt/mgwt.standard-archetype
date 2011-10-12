@@ -21,10 +21,6 @@ package ${package}.client;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.web.bindery.event.shared.EventBus;
 
-import ${package}.client.activities.CatalogOverViewDisplay;
-import ${package}.client.activities.CatalogView;
-import ${package}.client.activities.CatalogViewerDisplay;
-
 
 public interface ClientFactory {
 

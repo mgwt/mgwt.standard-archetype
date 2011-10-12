@@ -8,8 +8,6 @@ import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
 
-import ${package}.client.activities.CatalogOverViewActivity;
-import ${package}.client.activities.HomePlace;
 
 /**
  * 

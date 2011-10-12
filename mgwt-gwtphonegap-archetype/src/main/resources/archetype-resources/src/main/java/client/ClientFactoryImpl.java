@@ -22,13 +22,6 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.SimpleEventBus;
 
-import ${package}.client.activities.CatalogOverViewDisplay;
-import ${package}.client.activities.CatalogOverViewDisplayGwtImpl;
-import ${package}.client.activities.CatalogView;
-import ${package}.client.activities.CatalogViewGwtImpl;
-import ${package}.client.activities.CatalogViewerDisplay;
-import ${package}.client.activities.CatalogViewerDisplayGwtImpl;
-
 /**
  * @author Daniel Kurka
  * 
@@ -37,9 +30,6 @@ public class ClientFactoryImpl implements ClientFactory {
 
 	private EventBus eventBus;
 	private PlaceController placeController;
-	private CatalogOverViewDisplayGwtImpl ${artifactId}OverViewDisplay;
-	private CatalogViewGwtImpl ${artifactId}View;
-	private CatalogViewerDisplayGwtImpl ${artifactId}ViewerDisplay;
 
 	public ClientFactoryImpl() {
 		eventBus = new SimpleEventBus();
@@ -56,30 +46,6 @@ public class ClientFactoryImpl implements ClientFactory {
 	@Override
 	public PlaceController getPlaceController() {
 		return placeController;
-	}
-
-	@Override
-	public CatalogOverViewDisplay getCatalogOverViewDisplay() {
-		if (${artifactId}OverViewDisplay == null) {
-			${artifactId}OverViewDisplay = new CatalogOverViewDisplayGwtImpl();
-		}
-		return ${artifactId}OverViewDisplay;
-	}
-
-	@Override
-	public CatalogView getCatalogView() {
-		if (${artifactId}View == null) {
-			${artifactId}View = new CatalogViewGwtImpl();
-		}
-		return ${artifactId}View;
-	}
-
-	@Override
-	public CatalogViewerDisplay getCatalogViewerDisplay() {
-		if (${artifactId}ViewerDisplay == null) {
-			${artifactId}ViewerDisplay = new CatalogViewerDisplayGwtImpl();
-		}
-		return ${artifactId}ViewerDisplay;
 	}
 
 }
