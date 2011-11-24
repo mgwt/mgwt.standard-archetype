@@ -33,7 +33,7 @@
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>false</downloadJavadocs>
-					<buildOutputDirectory>war/WEB-INF/classes</buildOutputDirectory>
+					<buildOutputDirectory>target/${project.artifactId}-${project.version}/WEB-INF/classes</buildOutputDirectory>
 					<projectnatures>
 						<projectnature>org.eclipse.jdt.core.javanature</projectnature>
 						<projectnature>com.google.gdt.eclipse.core.webAppNature</projectnature>
@@ -58,16 +58,43 @@
 						<exclude>com.google.gwt:gwt-dev</exclude>
 						<exclude>javax.validation:validation-api</exclude>
 					</excludes>
-					<linkedResources>
-						<linkedResource>
-							<name>war</name>
-							<type>2</type>
-							<location>PROJECT_LOC/target/${project.artifactId}-${project.version}</location>
-						</linkedResource>
-					</linkedResources>
+					
 
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>2.4.0</version>
+				<executions>
+
+								<execution>
+									<id>compile gwt</id>
+									<goals>
+										<goal>compile</goal>
+
+									</goals>
+								</execution>
+
+							</executions>
+			</plugin>
+			<plugin>
+										<artifactId>maven-assembly-plugin</artifactId>
+										<executions>
+											<execution>
+												<id>assemble</id>
+												<phase>package</phase>
+												<goals>
+													<goal>single</goal>
+												</goals>
+											</execution>
+										</executions>
+										<configuration>
+											<descriptors>
+												<descriptor>src/main/assembly/clientcode.xml</descriptor>
+											</descriptors>
+										</configuration>
+									</plugin>
 
 		</plugins>
 		<resources>

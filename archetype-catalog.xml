@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-catalog>
+   <archetypes>
+		<archetype>
+           <groupId>com.googlecode.mgwt.archetypes</groupId>
+           <artifactId>mgwt-gwtphonegap-archetype</artifactId>
+           <version>1.0.0-SNAPSHOT</version>
+           <repository>http://www.m-gwt.com/m2/repo/</repository>
+           <description>Basic project to get started with mgwt and gwtphonegap</description>
+       </archetype>
+   </archetypes>
+</archetype-catalog>

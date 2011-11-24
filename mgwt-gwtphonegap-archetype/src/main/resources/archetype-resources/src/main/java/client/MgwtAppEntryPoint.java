@@ -34,10 +34,11 @@ import com.googlecode.mgwt.mvp.client.AnimationMapper;
 import com.googlecode.mgwt.mvp.client.display.AnimatableDisplayBaseImpl;
 import com.googlecode.mgwt.ui.client.MGWT;
 import com.googlecode.mgwt.ui.client.MGWTSettings;
-import com.googlecode.mgwt.ui.client.MGWTUtil;
-import com.googlecode.mgwt.ui.client.MasterRegionHandler;
-import com.googlecode.mgwt.ui.client.OrientationRegionHandler;
-import com.googlecode.mgwt.ui.client.panel.TabletPortraitOverlay;
+import com.googlecode.mgwt.ui.client.dialog.TabletPortraitOverlay;
+import com.googlecode.mgwt.ui.client.layout.MasterRegionHandler;
+import com.googlecode.mgwt.ui.client.layout.OrientationRegionHandler;
+import com.googlecode.mgwt.ui.client.MGWTSettings.ViewPort;
+import com.googlecode.mgwt.ui.client.MGWTSettings.ViewPort.DENSITY;
 
 import ${package}.client.css.AppBundle;
 
@@ -48,15 +49,22 @@ import ${package}.client.css.AppBundle;
 public class MgwtAppEntryPoint implements EntryPoint {
 
 	private void start() {
-		MGWTSettings settings = new MGWTSettings();
+		
+		//setting up viewport
+		ViewPort viewPort = new MGWTSettings.ViewPort();
+		viewPort.setTargetDensity(DENSITY.MEDIUM);
+		viewPort.setUserScaleAble(false).setMinimumScale(1.0).setMinimumScale(1.0).setMaximumScale(1.0);
 
+		MGWTSettings settings = new MGWTSettings();
+		settings.setViewPort(viewPort);
+		//your logo
+		settings.setIconUrl("logo.png");
 		settings.setAddGlosToIcon(true);
-		settings.setFixViewPort(true);
 		settings.setFullscreen(true);
 		settings.setPreventScrolling(true);
-
-		MGWT mgwt = new MGWT();
-		mgwt.applySettings(settings);
+		MGWT.applySettings(settings);
+		
+		
 
 		final ClientFactory clientFactory = new ClientFactoryImpl();
 
@@ -66,7 +74,7 @@ public class MgwtAppEntryPoint implements EntryPoint {
 
 		historyHandler.register(clientFactory.getPlaceController(), clientFactory.getEventBus(), new ${package}.client.activities.HomePlace());
 
-		if (MGWTUtil.getFeatureDetection().isIPad() || MGWTUtil.getFeatureDetection().isDesktop()) {
+		if ((MGWT.getOsDetection().isTablet())) {
 			// very nasty workaround because GWT does not corretly support
 			// @media
 			StyleInjector.inject(AppBundle.INSTANCE.css().getText());

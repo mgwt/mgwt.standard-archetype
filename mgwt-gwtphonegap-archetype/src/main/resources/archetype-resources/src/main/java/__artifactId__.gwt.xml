@@ -13,7 +13,7 @@
 	
 	<set-property name="user.agent" value="safari" />
 	
-	<!--  here you can set mgwt.os to a specific platform
+	<!--  here you can set mgwt.os to a specific platform -->
 	<!-- <set-property name="mgwt.os" value="android" /> -->
 	
 	<!-- here you can turn off css obfuscation -->
