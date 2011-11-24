@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 
 
@@ -58,7 +59,7 @@
 						<exclude>com.google.gwt:gwt-dev</exclude>
 						<exclude>javax.validation:validation-api</exclude>
 					</excludes>
-					
+
 
 				</configuration>
 			</plugin>
@@ -68,33 +69,33 @@
 				<version>2.4.0</version>
 				<executions>
 
-								<execution>
-									<id>compile gwt</id>
-									<goals>
-										<goal>compile</goal>
+					<execution>
+						<id>compile gwt</id>
+						<goals>
+							<goal>compile</goal>
 
-									</goals>
-								</execution>
+						</goals>
+					</execution>
 
-							</executions>
+				</executions>
 			</plugin>
 			<plugin>
-										<artifactId>maven-assembly-plugin</artifactId>
-										<executions>
-											<execution>
-												<id>assemble</id>
-												<phase>package</phase>
-												<goals>
-													<goal>single</goal>
-												</goals>
-											</execution>
-										</executions>
-										<configuration>
-											<descriptors>
-												<descriptor>src/main/assembly/clientcode.xml</descriptor>
-											</descriptors>
-										</configuration>
-									</plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>assemble</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<descriptors>
+						<descriptor>src/main/assembly/clientcode.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
 
 		</plugins>
 		<resources>
