@@ -9,6 +9,12 @@
 	<packaging>maven-archetype</packaging>
 
 	<name>mgwt-gwtphonegap-archetype</name>
+	
+	<scm>
+			<url>https://code.google.com/p/mgwt.standard-archetype/</url>
+			<connection>scm:git:https://code.google.com/p/mgwt.standard-archetype/</connection>
+			<developerConnection>scm:git:https://code.google.com/p/mgwt.standard-archetype/</developerConnection>
+	</scm>
 
 	<build>
 		<extensions>
