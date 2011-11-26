@@ -39,13 +39,6 @@
 		</pluginManagement>
 	</build>
 	
-	<dependencies>
-		<dependency>
-			<groupId>com.googlecode.mgwt</groupId>
-			<artifactId>mgwt</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
 	
 		
 
