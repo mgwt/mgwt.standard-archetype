@@ -5,7 +5,7 @@
 	<groupId>com.googlecode.mgwt.archetypes</groupId>
 	<artifactId>mgwt-standard-archetype</artifactId>
 	<version>1.0.1-SNAPSHOT</version>
-	<packaging>maven-archetype</packaging>
+	<packaging>jar</packaging>
 
 	<name>mgwt-gwtphonegap-archetype</name>
 	
@@ -38,6 +38,16 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.googlecode.mgwt</groupId>
+			<artifactId>mgwt</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	
+		
 
 	<distributionManagement>
 		<repository>

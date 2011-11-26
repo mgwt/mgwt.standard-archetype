@@ -11,6 +11,10 @@
 	<inherits name="com.google.gwt.activity.Activity" />
 	<inherits name="com.googlecode.mgwt.MGWT"/>
 	
+	<!-- uncomment this if you want to use gwt phonegap -->
+	<!--<inherits name="com.googlecode.gwtphonegap.PhoneGap"/>-->
+	
+	<!-- set the user agent to safari -> only webkit -->
 	<set-property name="user.agent" value="safari" />
 	
 	<!--  here you can set mgwt.os to a specific platform -->
