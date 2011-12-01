@@ -31,7 +31,6 @@ import com.google.gwt.user.client.ui.SimplePanel;
 import com.googlecode.mgwt.mvp.client.AnimatableDisplay;
 import com.googlecode.mgwt.mvp.client.AnimatingActivityManager;
 import com.googlecode.mgwt.mvp.client.AnimationMapper;
-import com.googlecode.mgwt.mvp.client.display.AnimatableDisplayBaseImpl;
 import com.googlecode.mgwt.ui.client.MGWT;
 import com.googlecode.mgwt.ui.client.MGWTSettings;
 import com.googlecode.mgwt.ui.client.dialog.TabletPortraitOverlay;
@@ -89,7 +88,7 @@ public class MgwtAppEntryPoint implements EntryPoint {
 	}
 
 	private void createPhoneDisplay(ClientFactory clientFactory) {
-		AnimatableDisplayBaseImpl display = GWT.create(AnimatableDisplay.class);
+		AnimatableDisplay display = GWT.create(AnimatableDisplay.class);
 
 		PhoneActivityMapper appActivityMapper = new PhoneActivityMapper(clientFactory);
 
@@ -107,7 +106,7 @@ public class MgwtAppEntryPoint implements EntryPoint {
 		SimplePanel navContainer = new SimplePanel();
 		navContainer.getElement().setId("nav");
 		navContainer.getElement().addClassName("landscapeonly");
-		AnimatableDisplayBaseImpl navDisplay = GWT.create(AnimatableDisplay.class);
+		AnimatableDisplay navDisplay = GWT.create(AnimatableDisplay.class);
 
 		final TabletPortraitOverlay tabletPortraitOverlay = new TabletPortraitOverlay();
 
@@ -126,7 +125,7 @@ public class MgwtAppEntryPoint implements EntryPoint {
 
 		SimplePanel mainContainer = new SimplePanel();
 		mainContainer.getElement().setId("main");
-		AnimatableDisplayBaseImpl mainDisplay = GWT.create(AnimatableDisplay.class);
+		AnimatableDisplay mainDisplay = GWT.create(AnimatableDisplay.class);
 
 		TabletMainActivityMapper tabletMainActivityMapper = new TabletMainActivityMapper(clientFactory);
 
