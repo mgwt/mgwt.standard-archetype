@@ -78,6 +78,10 @@
 					</execution>
 
 				</executions>
+				
+				<configuration>
+				   <runTarget>index.html</runTarget>
+				 </configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
