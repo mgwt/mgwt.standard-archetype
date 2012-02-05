@@ -124,7 +124,7 @@
 		<dependency>
 			<groupId>com.googlecode.gwtphonegap</groupId>
 			<artifactId>gwtphonegap</artifactId>
-			<version>1.4.1.0</version>
+			<version>1.4.0.1</version>
 
 		</dependency>
 
