@@ -118,13 +118,13 @@
 		<dependency>
 			<groupId>com.googlecode.mgwt</groupId>
 			<artifactId>mgwt</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.2</version>
 		</dependency>
 		<!-- gwtphonegap dependency -->
 		<dependency>
 			<groupId>com.googlecode.gwtphonegap</groupId>
 			<artifactId>gwtphonegap</artifactId>
-			<version>1.2.0.0</version>
+			<version>1.4.1.0</version>
 
 		</dependency>
 
