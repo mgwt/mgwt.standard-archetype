@@ -36,8 +36,6 @@ import com.googlecode.mgwt.ui.client.MGWTSettings;
 import com.googlecode.mgwt.ui.client.dialog.TabletPortraitOverlay;
 import com.googlecode.mgwt.ui.client.layout.MasterRegionHandler;
 import com.googlecode.mgwt.ui.client.layout.OrientationRegionHandler;
-import com.googlecode.mgwt.ui.client.MGWTSettings.ViewPort;
-import com.googlecode.mgwt.ui.client.MGWTSettings.ViewPort.DENSITY;
 
 import ${package}.client.css.AppBundle;
 
@@ -49,19 +47,8 @@ public class MgwtAppEntryPoint implements EntryPoint {
 
 	private void start() {
 		
-		//setting up viewport
-		ViewPort viewPort = new MGWTSettings.ViewPort();
-		viewPort.setTargetDensity(DENSITY.MEDIUM);
-		viewPort.setUserScaleAble(false).setMinimumScale(1.0).setMinimumScale(1.0).setMaximumScale(1.0);
-
-		MGWTSettings settings = new MGWTSettings();
-		settings.setViewPort(viewPort);
-		//your logo
-		settings.setIconUrl("logo.png");
-		settings.setAddGlosToIcon(true);
-		settings.setFullscreen(true);
-		settings.setPreventScrolling(true);
-		MGWT.applySettings(settings);
+	  //set viewport and other settings for mobile
+    MGWT.applySettings(MGWTSettings.getAppSetting());
 		
 		
 
