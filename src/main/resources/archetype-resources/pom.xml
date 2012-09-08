@@ -70,6 +70,10 @@
 				<executions>
 
 					<execution>
+					    <configuration>
+							<runTarget>index.html</runTarget>
+				   			<copyWebapp>true</copyWebapp>
+						</configuration>
 						<id>compile gwt</id>
 						<goals>
 							<goal>compile</goal>
