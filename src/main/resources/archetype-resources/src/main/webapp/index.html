@@ -2,40 +2,21 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 <!doctype html>
-
 <html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
-
-
-<style type="text/css">
-
-
-
-</style>
-
-<title>${artifactId}</title>
-
-
-<script type="text/javascript" language="javascript" src="${artifactId}/${artifactId}.nocache.js"></script>
-
-</head>
-
-
-<body>
-
-
-<!-- OPTIONAL: include this if you want history support -->
-<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position: absolute; width: 0; height: 0; border: 0"></iframe>
-
-
-<noscript>
-<div
-	style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
-Your web browser must have JavaScript enabled in order for this
-application to display correctly.</div>
-</noscript>
-
-</body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>${artifactId}</title>
+    <script type="text/javascript" language="javascript" src="${artifactId}/${artifactId}.nocache.js"></script>
+    <!-- If you are building gwt phonegap applications refer to the doc on how to use these -->
+    <!-- TODO(kfa): Add link here to docs -->
+    <!-- <script type="text/javascript" src="cordova.js"></script>
+    <!-- Enable Supder dev mode for GWT Phonegap -->
+    <!-- <meta http-equiv="content-type" content="text/html; charset=UTF-8"> -->
+    <!-- <meta name="sdm_host" value="<youripaddress>"> -->
+    <!-- <meta name="sdm_port" value="9876"> -->
+    <!-- <meta name="sdm_module" value="${artifactId}"> -->
+    <!-- <script type="text/javascript" src="gwt-phonegap-sdm.js"></script> -->
+  </head>
+  <body>
+  </body>
 </html>
