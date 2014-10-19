@@ -11,8 +11,8 @@
   
   <scm>
       <url>https://code.google.com/p/mgwt.standard-archetype/</url>
-      <connection>scm:git:https://code.google.com/p/mgwt.standard-archetype/</connection>
-      <developerConnection>scm:git:https://code.google.com/p/mgwt.standard-archetype/</developerConnection>
+      <connection>scm:git:git@github.com:mgwt/mgwt.standard-archetype.git</connection>
+      <developerConnection>scm:git:git@github.com:mgwt/mgwt.standard-archetype.git</developerConnection>
   </scm>
 
   <build>
